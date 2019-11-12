@@ -1,0 +1,7 @@
+* {padding: 0; margin: 0;box-sizing: border-box;}
+a {text-decoration: none;}
+.clearFix:after{content: '';clear: both; display: block;}
+.clearFix:before{content: '';clear: both; display: block;}
+ol,ul,dl {
+    list-style-type: none;
+}
