@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./src/reset.css">
     <link rel="stylesheet" href="./src/home.css">
-
-    <style>
-        .page {
-            background-color: #000;
-        }
-    </style>
     <title>Document</title>
 </head>
 
@@ -92,44 +85,7 @@
         <li class="active">
             <section class="playlists">
                 <h2 class="playTitle">推荐歌单</h2>
-                <ol>
-                    <li>
-                        <div class="cover">
-                            <img width=105 src="//i.loli.net/2019/11/11/29DJuMg6liQ47eE.jpg" alt="图片">
-                        </div>
-                        <p>周杰伦的床边故事</p>
-                    </li>
-
-                    <li>
-                        <div class="cover">
-                            <img src="//i.loli.net/2019/11/11/1AUhwcDLHqFSPp2.jpg" alt="图片">
-                        </div>
-                        <p>我猜你一定有个爱而不得的人吧</p>
-                    </li>
-                    <li>
-                        <div class="cover">
-                            <img src="//i.loli.net/2019/11/11/HJO3M857RfaynVm.jpg" alt="图片">
-                        </div>
-                        <p>『好听的翻唱Cover集』</p>
-                    </li>
-                    <li>
-                        <div class="cover">
-                            <img src="//i.loli.net/2019/11/12/O1YVU8Bdg5AlDG6.jpg" alt="图片">
-                        </div>
-                        <p>耳朵存在的理由，200首必听欧美歌曲两行文字两行文字两行文字</p>
-                    </li>
-                    <li>
-                        <div class="cover">
-                            <img src="//i.loli.net/2019/11/12/2JFZxlpsGiMbhBv.jpg" alt="图片">
-                        </div>
-                        <p>友情客串 却留下刻骨铭心回忆</p>
-                    </li>
-                    <li>
-                        <div class="cover">
-                            <img src="//i.loli.net/2019/11/12/cSdoQUNJVaOwsuj.jpg" alt="图片">
-                        </div>
-                        <p>那些年甜甜的歌，甜到爆表～～～</p>
-                    </li>
+                <ol id="listType">
                 </ol>
             </section>
             <section class="songs">
@@ -256,51 +212,102 @@
     <script src="./src/jquery.min.js"></script>
     <script src="./src/main.js"></script>
     <script src="./vendors/av-min.js"></script>
+    <script src="./src/av.js"></script>
     <script type="text/javascript">
-        let $songList = $('ol#songs')
-        AV.init({
-        appId: "caDmm9duzxPW4201h94KFY6s-gzGzoHsz",
-        appKey: "knmWM1OGXpnSJ4EuDCEJ3nVz",
-        serverURLs: "https://cadmm9du.lc-cn-n1-shared.com"
-        });
-        var query = new AV.Query('Song');
-        query.find().then(function (Songs) {
-            for(let i =0;i < Songs.length;i++)
-            {
-                let song = Songs[i].attributes
-                let template = `<li>
-                    <div class="songBaseInfo">
-                        <h3>${song.musicName}</h3>
-                        <p><i></i>${song.musicAuthor}(床边故事)</p>
-                    </div>
-                    <a href="${song.musicUrl}"></a>
-                </li>`
-                $songList.append(template)
-            }
-        });
+        
+        let $songList = $('ol#songs') //获取歌曲列表
+        let $listType = $('ol#listType')  //获取歌单
+        getSongs()
+        getListType()
+
+        //上传歌曲的格式
+        var objects = [
+            {'musicAuthor':'押尾コータロー','musicName':'Always','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/Always.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'Destiny','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/Destiny.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'fight','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/fight.m4a','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'HEART BEAT!','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/HEART%20BEAT%21.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'IN MY LIFE','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/IN%20MY%20LIFE.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'グリーンスリーブス','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'ティコ','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E3%83%86%E3%82%A3%E3%82%B3.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'プロローグ','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E3%83%97%E3%83%AD%E3%83%AD%E3%83%BC%E3%82%B0.m4a','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'Beyond','musicName':'不再犹豫','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E4%B8%8D%E5%86%8D%E7%8A%B9%E8%B1%AB.m4a','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'黄昏','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E9%BB%84%E6%98%8F.mp3','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'見上げてごらん夜の星を','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E8%A6%8B%E4%B8%8A%E3%81%92%E3%81%A6%E3%81%94%E3%82%89%E3%82%93%E5%A4%9C%E3%81%AE%E6%98%9F%E3%82%92.m4a','songList':'5dca64c343c257007f5cb35d'},
+            {'musicAuthor':'押尾コータロー','musicName':'手のひら','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E6%89%8B%E3%81%AE%E3%81%B2%E3%82%89.mp3','songList':'5dca64c343c257007f5cb35d'}
+        ]
+        loadMusic([])//填进参数就上传
 
         
+        $(document).on('click','ol#listType>li',function (e) {
+            console.log(e)
+            window.open(`./listtype.html?type=${e.currentTarget.dataset.type}`,"_self")
+            console.log(e.currentTarget.dataset.type)
+        })
+        $(document).on('click','ol#songs>li',function (e) {
+            console.log(e)
+            console.log(e.currentTarget.dataset.id)
+        })
+        function getSongs () {
+            var query = new AV.Query('Song');
+            query.find().then(function (Songs) {
+                for(let i =0;i < Songs.length;i++)
+                {
+                    let song = Songs[i].attributes
+                    let template = `<li data-id="${Songs[i].id}">
+                        <div class="songBaseInfo">
+                            <h3>${song.musicName}</h3>
+                            <p><i></i>${song.musicAuthor}</p>
+                        </div>
+                        <a href="${song.musicUrl}"></a>
+                    </li>`
+                    $songList.append(template)
+                }
+            });
+        }
+        function getListType () {
+            var query = new AV.Query('SongList');
+            query.find().then(function (listType) {
+                for(let i =0;i < listType.length;i++)
+                {
+                    let type = listType[i].attributes
+                    let template = `<li data-type="${listType[i].id}">
+                        <div class="cover">
+                            <img src="${type.listPic}" alt="图片">
+                        </div>
+                        <p>${type.listName}</p>
+                    </li>`
+                    $listType.append(template)
+                }
+            });
+        }
+        
+        
+        //上传歌曲的函数
+        function loadMusic (objects) {
+            var Todo = AV.Object.extend('Song');
+            var songList = []
+            
+            for (let i = 0;i < objects.length;i++) {
+                let song = objects[i]
+                let todo = new Todo()
+                todo.set('musicAuthor',song.musicAuthor)
+                todo.set('musicName',song.musicName)
+                todo.set('musicUrl',song.musicUrl)
+                var songtype = AV.Object.createWithoutData('SongList', song.songList);
+                todo.set('songList', songtype);
+                songList.push(todo)
+            }
+            AV.Object.saveAll(songList);
+        }
+        
 
-        var Todo = AV.Object.extend('Song');
 
-        // 构建对象
-        var todo = new Todo();
-
-        var objects = [
-            {'musicAuthor':'周杰伦','musicName':'Now You See Me','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20N%20ow%20%20Y%20ou%20%20S%20ee%20%20M%20e.flac'},
-            {'musicAuthor':'周杰伦','musicName':'不该','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E4%B8%8D%20%E8%AF%A5.flac'},
-            {'musicAuthor':'周杰伦','musicName':'前世情人','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%89%8D%20%E4%B8%96%E6%83%85%20%E4%BA%BA.flac'},
-            {'musicAuthor':'周杰伦','musicName':'床边故事','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%BA%8A%20%E8%BE%B9%E6%95%85%20%E4%BA%8B.flac'},
-            {'musicAuthor':'周杰伦','musicName':'爱情废柴','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E7%88%B1%20%E6%83%85%E5%BA%9F%20%E6%9F%B4.flac'},
-            {'musicAuthor':'周杰伦','musicName':'一点点','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E4%B8%80%20%E7%82%B9%20%E7%82%B9.flac'},
-            {'musicAuthor':'周杰伦','musicName':'土耳其冰淇淋','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E5%9C%9F%20%E8%80%B3%E5%85%B6%20%E5%86%B0%E6%B7%87%20%E6%B7%8B.flac'},
-            {'musicAuthor':'周杰伦','musicName':'英雄','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E8%8B%B1%20%E9%9B%84.flac'},
-            {'musicAuthor':'周杰伦','musicName':'说走就走','musicUrl':'http://q0u2lzqnn.bkt.clouddn.com/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E8%AF%B4%20%E8%B5%B0%E5%B0%B1%20%E8%B5%B0.flac'}
-    
-        ]
-        AV.Object.saveAll(objects);
+        
         // 为属性赋值
     </script>
 </body>
 
 </html>
+
+
+
