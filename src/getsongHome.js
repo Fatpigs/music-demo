@@ -12,6 +12,7 @@
             let song = Songs[i].attributes
             $songList.append(template(song))
         }
+        $('#songs>div').remove()
     }
     function template (song) {
         return `<li data-id="${song.id}">
