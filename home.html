@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./dist/reset.css">
-    <link rel="stylesheet" href="./dist/home.css">
+    
     <title>Document</title>
 </head>
 
 <body>
-    <div class="page">
-    </div>
     <section class="header">
         <div class="headlogo">
             <div class="logo">
@@ -72,7 +70,7 @@
 
             </div>
             <a href="#" class="downloadApp">下载APP</a>
-        </div>
+        </div> 
         <div class="tapbars">
             <ol>
                 <li class="active"><span>推荐音乐</span></li>
@@ -95,7 +93,6 @@
                     <div class="loaderWrap">
                         <img src="//i.loli.net/2019/11/18/cTvoKwnSMFaRLWx.gif" alt="loader" />
                     </div>
-                    
                 </ol>
             </section>
             <section class="art">
@@ -199,7 +196,7 @@
                     </div>
                     <a href=""></a>
                 </li>
-                
+
             </ol>
         </li>
         <li>
@@ -214,19 +211,17 @@
         </li>
     </ol>
 
-    <script src="./vendors/jquery.min.js"></script>
-    <script src="./vendors/av-min.js"></script>
-    <script src="./dist/av.js"></script>
-    <script src="./dist/main.js"></script>
-    <script src="./dist/gettypeHome.js"></script>
-    <script src="./dist/getsongHome.js"></script>
+    
+    <script data-main="src/main" src="./vendors/require.js"></script>
     <script type="text/javascript">
-        var loadingImage = new Image()
-        loadingImage.src = "//i.loli.net/2019/11/18/cTvoKwnSMFaRLWx.gif"
+        requirejs.config({
+            paths: {
+                jquery: '../vendors/jquery.min',
+                av: '../vendors/av-min'
+            }
+        });
     </script>
+    <script src="./dist/bundle.js"></script>
 </body>
 
 </html>
-
-
-

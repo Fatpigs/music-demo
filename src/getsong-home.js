@@ -1,5 +1,5 @@
 
-!(function getSong () {
+define(['jquery','av'],function($,AV){
     let $songList = $('ol#songs') //获取歌曲列表
     function getQuery () {
         var query = new AV.Query('Song');
@@ -24,7 +24,16 @@
         </li>`
     }
 
-    getQuery().then(fillSongs,function(){
-        console.log("出错了")
-    });
-})()
+    function getSong() {
+        getQuery().then(fillSongs,function(){
+            console.log("出错了")
+        });
+    }
+
+    $(document).on('click', 'ol#songs>li', function (e) {
+        console.log(e)
+    })
+    
+    return getSong
+
+})
