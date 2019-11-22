@@ -1,4 +1,4 @@
-define(['jquery', 'av'], function ($, AV) {
+export function gettype_home($,AV) {
 
     var loadingImage = new Image()
     loadingImage.src = "//i.loli.net/2019/11/18/cTvoKwnSMFaRLWx.gif"
@@ -26,17 +26,13 @@ define(['jquery', 'av'], function ($, AV) {
         </li>`
     }
 
-    function getType() {
-        getQuery().then(fillListType, function () {
-            console.log("出错啦!")
-        });
-    }
+    getQuery().then(fillListType, function () {
+        console.log("出错啦!")
+    });
+
 
     $(document).on('click', 'ol#listType>li', function (e) {
 
         window.open(`./listtype.html?type=${e.currentTarget.dataset.type}`, "_self")
     })
-
-    return getType
-
-})
+}

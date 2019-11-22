@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "build2": "webpack"
+    "build": "rm -rf ./dist && webpack",
+    "watch": "webpack -w"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +28,7 @@
     "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-vue": "^6.0.1",
+    "expose-loader": "^0.7.5",
     "file-loader": "^4.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

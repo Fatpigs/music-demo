@@ -39,7 +39,7 @@
     background-color: #D43C33;
     display: flex;
     justify-content: space-between;
-    padding: 24px 9px 24px 10px;
+    padding: 16px 9px 25px 0;
     align-items: center;
     vertical-align: top;
 }
@@ -63,6 +63,7 @@
     font-size: 16px;
     text-align: center;
     display: inline-block;
+    margin-top: 4px;
     
 }
 
@@ -80,6 +81,7 @@
     width: 33.333333%;
     text-align: center;
     vertical-align: top;
+    
 }
 
 .header>.tapbars {
@@ -97,6 +99,7 @@
     position: relative;
     line-height: 40px;
     vertical-align: top;
+    z-index: 2;
 }
 
 
@@ -224,6 +227,10 @@
     justify-content: center;
 }
 
+.loaderWrap>div.active {
+    display: none;
+}
+
 #songs>div>img.none {
     display: none;
 }
@@ -280,7 +287,6 @@
     background: url("../images/hot_music_bg_3x.jpg") no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: -1px;
     padding-left: 20px;
     min-height: 22vh;
     display: flex;

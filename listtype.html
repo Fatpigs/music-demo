@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./dist/reset.css">
-    <link rel="stylesheet" href="./dist/list.css">
     <title>Document</title>
+    <script src="./dist/bundle.js"></script>
 </head>
 
 <body>
@@ -19,62 +18,11 @@
         <ol class="songsList" id="songsList">    
         </ol>
     </section>
+    <script data-main="src/main" src="./vendors/require.js"></script>
     <script src="./vendors/av-min.js"></script>
     <script src="./dist/av.js"></script>
     <script src="./vendors/jquery.min.js"></script>
-    <script>
-        var $songsList = $('#songsList')
-        var $headerWrap = $('#headerWrap')
-        var queryString = function (key) {
-            return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
-        }
-
-        getListType()
-        getSong()
-
-        $(document).on('click','#songsList>li',function(e){
-            window.open(`./song.html?id=${e.currentTarget.dataset.id}`,"_self")
-        })
-
-        function getSong () {
-            var pointer = AV.Object.createWithoutData('SongList', queryString('type'));
-            var query = new AV.Query('Song');
-            query.equalTo('songList', pointer);
-            query.find().then(function (songs) {
-                // students 是包含满足条件的 Student 对象的数组
-                for(let i = 0;i < songs.length;i++) {
-                    var song = songs[i]
-                    let template = `
-                        <li data-id="${song.id}">
-                            <div class="number">${i+1}</div>
-                            <div class="songBaseInfo">
-                                <h3>${song.attributes.musicName}</h3>
-                                <p>${song.attributes.musicAuthor}</p>
-                            </div>
-                            <a href="${song.attributes.musicUrl}"></a>
-                        </li>
-                    `
-                    $songsList.append(template)
-                }
-            });
-        }
-        function getListType () {
-            var typeString = queryString('type')
-            var query = new AV.Query('SongList');
-            query.get(typeString).then(function (type) {
-                var template = `
-                    <div class="bgFuzzy" style="background: url(${type.attributes.listPic}) no-repeat;"> </div>
-                    <div class="list_header">
-                        <img src="${type.attributes.listPic}" alt="list_header">
-                        <p>${type.attributes.listName}</p>
-                    </div>
-                    <div class="songIntro">
-                        <p><span>简介:</span>${type.attributes.listIntro}</p>
-                    </div>
-                `
-                $headerWrap.append(template)
-            });
-        }
-    </script>
+    
+    
 </body>
 </html>

@@ -1,5 +1,4 @@
-
-define(['jquery','av'],function($,AV){
+export function getsong_home($,AV){
     let $songList = $('ol#songs') //获取歌曲列表
     function getQuery () {
         var query = new AV.Query('Song');
@@ -34,6 +33,5 @@ define(['jquery','av'],function($,AV){
         console.log(e)
     })
     
-    return getSong
-
-})
+    getSong()
+}
