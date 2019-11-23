@@ -1,6 +1,6 @@
-!(function getListType() {
+export function gettype_type($,AV) {
 
-    function queryString() {
+    function queryString(key) {
         return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
     }
 
@@ -25,9 +25,10 @@
     function getTypeInfo() {
         var $headerWrap = $('#headerWrap')
         var typeString = queryString('type')
-        getQuery.get(typeString).then(function (type) {
+        getQuery().get(typeString).then(function (type) {
             $headerWrap.append(template(type))
         });
     }
-    return getTypeInfo
-})()
+
+    getTypeInfo()
+}

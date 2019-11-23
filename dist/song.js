@@ -81,54 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/home.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/song.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./images/hot_music_bg_3x.jpg":
-/*!************************************!*\
-  !*** ./images/hot_music_bg_3x.jpg ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"../images/hot_music_bg_3x.jpg\";\n\n//# sourceURL=webpack:///./images/hot_music_bg_3x.jpg?");
-
-/***/ }),
-
-/***/ "./images/index_icon_2x.png":
-/*!**********************************!*\
-  !*** ./images/index_icon_2x.png ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"../images/index_icon_2x.png\";\n\n//# sourceURL=webpack:///./images/index_icon_2x.png?");
-
-/***/ }),
-
-/***/ "./images/search.svg":
-/*!***************************!*\
-  !*** ./images/search.svg ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"../images/search.svg\";\n\n//# sourceURL=webpack:///./images/search.svg?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/home.css":
-/*!************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/home.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar getUrl = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ../images/index_icon_2x.png */ \"./images/index_icon_2x.png\"));\nvar ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(/*! ../images/hot_music_bg_3x.jpg */ \"./images/hot_music_bg_3x.jpg\"));\nvar ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(/*! ../images/search.svg */ \"./images/search.svg\"));\n// Module\nexports.push([module.i, \"/* Common */\\r\\n\\r\\n* {\\r\\n    font-family: Helvetica, sans-serif, STHeiTi;\\r\\n}\\r\\n\\r\\n.playTitle {\\r\\n    font-size: 17px;\\r\\n    position: relative;\\r\\n    padding:16px 0 18px 9px;\\r\\n    font-weight: normal;\\r\\n    display: flex;\\r\\n    align-items: center;;\\r\\n}\\r\\n.playTitle::after {\\r\\n    content: '';\\r\\n    width: 2px;\\r\\n    height: 16px;\\r\\n    background-color: #d33a31;\\r\\n    display: block;\\r\\n    position: absolute;\\r\\n    left: 0;\\r\\n    top: 50%;\\r\\n    margin-top: -9px;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n/* Header */\\r\\n.header {\\r\\n    position: fixed;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n    width: 100%;\\r\\n    z-index: 1;\\r\\n}\\r\\n\\r\\n.headlogo {\\r\\n    background-color: #D43C33;\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    padding: 16px 9px 25px 0;\\r\\n    align-items: center;\\r\\n    vertical-align: top;\\r\\n}\\r\\n\\r\\n.headlogo>.logo {\\r\\n    margin-top: 4px;\\r\\n}\\r\\n\\r\\n.headlogo>.logo>.topsvg {\\r\\n    width: 142px;\\r\\n    height: 25px;\\r\\n}\\r\\n\\r\\n.headlogo>.downloadApp {\\r\\n    background-color: #fff;\\r\\n    color: #D43C33;\\r\\n    line-height: 36px;\\r\\n    display: block;\\r\\n    padding: 0 19px;\\r\\n    border-radius: 18px;\\r\\n    font-size: 16px;\\r\\n    text-align: center;\\r\\n    display: inline-block;\\r\\n    margin-top: 4px;\\r\\n    \\r\\n}\\r\\n\\r\\n.header>.tapbars{\\r\\n    border-bottom: 1px solid #EEEEEE;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n.header>.tapbars>ol {\\r\\n    display: flex;\\r\\n}\\r\\n\\r\\n.header>.tapbars>ol>li {\\r\\n    width: 33.333333%;\\r\\n    text-align: center;\\r\\n    vertical-align: top;\\r\\n    \\r\\n}\\r\\n\\r\\n.header>.tapbars {\\r\\n    background-color: #fff;\\r\\n    font-size: 15px;\\r\\n}\\r\\n\\r\\n.header>.tapbars>ol>li.active {\\r\\n    color: #dd001b;\\r\\n}\\r\\n\\r\\n.header>.tapbars>ol>li>span {\\r\\n    display:inline-block;\\r\\n    width: 56%;\\r\\n    position: relative;\\r\\n    line-height: 40px;\\r\\n    vertical-align: top;\\r\\n    z-index: 2;\\r\\n}\\r\\n\\r\\n\\r\\n.header>.tapbars>ol>li.active>span::after {\\r\\n    content: '';\\r\\n    position: absolute;\\r\\n    bottom: 0;\\r\\n    left: 0;\\r\\n    background-color: #dd001b;\\r\\n    width: 100%;\\r\\n    height: 2px;\\r\\n}\\r\\n\\r\\n\\r\\n/* tapbarsContent playlists*/\\r\\n.tapbarsContent {\\r\\n    background-color: #FCFCFD;\\r\\n}\\r\\n\\r\\n.tapbarsContent>li {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n.tapbarsContent>li.active {\\r\\n    display: block;\\r\\n}\\r\\n\\r\\n.tapbarsContent>li {\\r\\n    margin-top: 125px;\\r\\n}\\r\\n\\r\\n\\r\\n.tapbarsContent .playlists>ol {\\r\\n    display: flex;\\r\\n    justify-content: center;\\r\\n    flex-wrap: wrap;\\r\\n}\\r\\n\\r\\n.tapbarsContent .playlists>ol>li {\\r\\n    width: 32.5%;\\r\\n    margin-right: 2px;\\r\\n    margin-bottom: 18px;\\r\\n}\\r\\n\\r\\n.tapbarsContent .playlists>ol>li>div>img {\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    display: inline-block;\\r\\n    vertical-align: top;\\r\\n}\\r\\n.tapbarsContent .playlists>ol>li>p {\\r\\n    font-size: 13px;\\r\\n    padding: 6px 2px 0 6px;\\r\\n    display: -webkit-box;\\r\\n    overflow: hidden;\\r\\n    -webkit-line-clamp: 2;\\r\\n    -webkit-box-orient: vertical;\\r\\n}\\r\\n\\r\\n#listType .cover {\\r\\n    padding-top: 100%;\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\n#listType .cover>img {\\r\\n    position: absolute;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n}\\r\\n\\r\\n/* tapbarsContent songs */\\r\\n\\r\\n\\r\\n.tapbarsContent .songs>ol>li>div>h3 {\\r\\n    font-size: 17px;\\r\\n    font-weight: normal;\\r\\n    padding: 2px 0;\\r\\n    white-space: nowrap;\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n}\\r\\n\\r\\n.tapbarsContent .songs>ol>li {\\r\\n    margin-left: 12px;\\r\\n    position: relative;\\r\\n    border-bottom: 1px solid #F3F3F4;\\r\\n    padding: 6px 0;\\r\\n    background-color: #FCFCFD;\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    align-items: center;\\r\\n}\\r\\n.tapbarsContent .songs>ol>li>div {\\r\\n    width: 83%;\\r\\n}\\r\\n.tapbarsContent .songs>ol>li>div>p {\\r\\n    font-size: 12px;\\r\\n    color: #888;\\r\\n    white-space: nowrap;\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n}\\r\\n.tapbarsContent .songs>ol>li>a {\\r\\n    display: inline-block;\\r\\n    vertical-align: top;\\r\\n    width: 22px;\\r\\n    height: 22px;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat;\\r\\n    background-position: -24px 0;\\r\\n    background-size: 166px 97px;\\r\\n    margin-right: 11px;\\r\\n}\\r\\n.tapbarsContent .songs>ol>li>div>p>i {\\r\\n    display: inline-block;\\r\\n    width: 12px;\\r\\n    height: 8px;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat;\\r\\n    margin-right: 4px;\\r\\n    background-size: 166px 97px;\\r\\n}\\r\\n\\r\\n\\r\\n.loaderWrap {\\r\\n    display: flex;\\r\\n    justify-content: center;\\r\\n}\\r\\n\\r\\n.loaderWrap>div.active {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n#songs>div.loaderWrap>div.noMore {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n#songs>div.loaderWrap>div.active {\\r\\n    display: block;\\r\\n}\\r\\n\\r\\n#listType>img.none {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n/* art */\\r\\n\\r\\n.art {\\r\\n    background: url(\\\"/images/recommand_bg_2x.png\\\") no-repeat;\\r\\n    background-size: cover;\\r\\n    padding-top: 16.9%;\\r\\n    padding-bottom: 23px;\\r\\n    display: flex;\\r\\n    justify-content: center;\\r\\n    flex-direction: column;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\n.art>.logo>svg {\\r\\n    width: 230px;\\r\\n    height: 44px;\\r\\n}\\r\\n\\r\\n.art>.logo {\\r\\n    \\r\\n}\\r\\n\\r\\n.art>.link {\\r\\n    margin-top: 12px;\\r\\n}\\r\\n\\r\\n.art>.link>a{\\r\\n    font-size: 16px;\\r\\n    line-height: 38px;\\r\\n    border: 1px solid #d33a31;\\r\\n    color: #d33a31;\\r\\n    padding: 10px 46px;\\r\\n    border-radius: 38px;\\r\\n}\\r\\n\\r\\n.art>.copyright {\\r\\n    color: #888;\\r\\n    font-size: 12px;\\r\\n    transform: scale(.75);\\r\\n    margin-top: 4px;\\r\\n}\\r\\n\\r\\n/* hot song */\\r\\n\\r\\n.hotLogo {\\r\\n    background: url(\" + ___CSS_LOADER_URL___1___ + \") no-repeat;\\r\\n    background-size: cover;\\r\\n    position: relative;\\r\\n    padding-left: 20px;\\r\\n    min-height: 22vh;\\r\\n    display: flex;\\r\\n    flex-direction: column;\\r\\n    justify-content: center;\\r\\n}\\r\\n\\r\\n.hotLogo::after {\\r\\n    content: '';\\r\\n    position: absolute;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n    right: 0;\\r\\n    bottom: 0;\\r\\n    z-index: 1;\\r\\n    background-color: rgba(0,0,0,.2);\\r\\n}\\r\\n\\r\\n.hotLogo>.hotWord {\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat;\\r\\n    width: 142px;\\r\\n    height: 67px;\\r\\n    background-position: -24px -30px;\\r\\n    background-size: 166px 97px;\\r\\n    z-index: 2;\\r\\n}\\r\\n\\r\\n.hotLogo>.hotTime {\\r\\n    font-size: 12px;\\r\\n    color: hsla(0,0%,100%,.8);\\r\\n    margin-top: 13px;\\r\\n    z-index : 2;\\r\\n}\\r\\n\\r\\n.hotSongsList>li>.number {\\r\\n    color: #df3436;\\r\\n}\\r\\n\\r\\n.hotSongsList>li>.songBaseInfo>h3 {\\r\\n    font-size: 17px;\\r\\n    font-weight: normal;\\r\\n    padding: 2px 0;\\r\\n    white-space: nowrap;\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n}\\r\\n\\r\\n.hotSongsList>li {\\r\\n    margin-left: 12px;\\r\\n    position: relative;\\r\\n    border-bottom: 1px solid #F3F3F4;\\r\\n    padding: 6px 0;\\r\\n    background-color: #FCFCFD;\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    align-items: center;\\r\\n}\\r\\n.hotSongsList>li>div {\\r\\n\\r\\n}\\r\\n.hotSongsList>li>.songBaseInfo>p {\\r\\n    font-size: 12px;\\r\\n    color: #888;\\r\\n    white-space: nowrap;\\r\\n    overflow: hidden;\\r\\n    text-overflow: ellipsis;\\r\\n}\\r\\n.hotSongsList>li>a {\\r\\n    display: inline-block;\\r\\n    vertical-align: top;\\r\\n    width: 22px;\\r\\n    height: 22px;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat;\\r\\n    background-position: -24px 0;\\r\\n    background-size: 166px 97px;\\r\\n    margin-right: 11px;\\r\\n}\\r\\n.hotSongsList>li>.songBaseInfo>p>i {\\r\\n    display: inline-block;\\r\\n    width: 12px;\\r\\n    height: 8px;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat;\\r\\n    margin-right: 4px;\\r\\n    background-size: 166px 97px;\\r\\n}\\r\\n\\r\\n\\r\\n/* search */\\r\\n\\r\\n.search-input {\\r\\n    padding: 15px 10px;\\r\\n    border-bottom: 1px solid #F2F3F4;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n.inputWrap {\\r\\n    background-color: #EBECEC;\\r\\n    border-radius: 30px;\\r\\n    padding: 0 30px;\\r\\n    position: relative;\\r\\n\\r\\n}\\r\\n\\r\\n.inputWrap>input {\\r\\n    background-color: transparent;\\r\\n    border: none;\\r\\n    line-height: 30px;\\r\\n    width: 100%;\\r\\n    \\r\\n}\\r\\n.inputWrap>input:visited\\r\\n.inputWrap>input:active,\\r\\n.inputWrap>input:focus {\\r\\n    border: none;\\r\\n}\\r\\n\\r\\n.inputWrap>i {\\r\\n    display: inline-block;\\r\\n    vertical-align: top;\\r\\n    background: url(\" + ___CSS_LOADER_URL___2___ + \") no-repeat top center;\\r\\n    width: 13px;\\r\\n    height: 13px;\\r\\n    position: absolute;\\r\\n    top: 9px;\\r\\n    left: 0;\\r\\n    margin: 0 8px;\\r\\n}\\r\\n\\r\\n.inputWrap>label {\\r\\n    position: absolute;\\r\\n    left: 30px;\\r\\n    top: 5px;\\r\\n    color: #c9c9c9;\\r\\n    font-size: 14px;\\r\\n    background: transparent;\\r\\n    pointer-events: none;\\r\\n}\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/home.css?./node_modules/css-loader/dist/cjs.js");
-
-/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/reset.css":
 /*!*************************************************************!*\
@@ -141,6 +97,17 @@ eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loa
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/song.css":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/song.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".page::after {\\r\\n\\r\\n    content: '';\\r\\n    position: absolute;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n    display: inline-block;\\r\\n    background: url(\\\"/images/place.jpg\\\") no-repeat;\\r\\n    background-size: cover;\\r\\n    filter: blur(40px);\\r\\n    z-index: -2;\\r\\n}\\r\\n\\r\\n.page::before {\\r\\n    content: '';\\r\\n    position: absolute;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n    z-index: -1;\\r\\n    background-color: rgba(0,0,0,.4);\\r\\n}\\r\\n\\r\\n.logo>svg{\\r\\n    width: 92px;\\r\\n    height: 17px;\\r\\n    margin-left: 10px;\\r\\n    margin-top: 10px;\\r\\n}\\r\\n\\r\\n.page>.disk {\\r\\n    margin-top: 40px;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n.page>.disk>.circle {\\r\\n    width: 248px;\\r\\n    height: 248px;\\r\\n    margin: 0 auto;\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\n.page>.disk>.circle>img {\\r\\n    width: 150px;\\r\\n    height: 150px;\\r\\n    position: absolute;\\r\\n    top: 50%;\\r\\n    left: 50%;\\r\\n    margin-left: -75px;\\r\\n    margin-top: -75px;\\r\\n    border-radius: 50%;\\r\\n    z-index: -1;\\r\\n}\\r\\n\\r\\n@media screen and (min-width: 360px)\\r\\n{\\r\\n    .page>.disk>.circle {\\r\\n        width: 296px;\\r\\n        height: 296px;\\r\\n        margin: 0 auto;\\r\\n        position: relative;\\r\\n    }\\r\\n    .page>.disk>.circle>img {\\r\\n        width: 190px;\\r\\n        height: 190px;\\r\\n        position: absolute;\\r\\n        top: 50%;\\r\\n        left: 50%;\\r\\n        margin-left: -95px;\\r\\n        margin-top: -95px;\\r\\n        border-radius: 50%;\\r\\n        z-index: -1;\\r\\n    }\\r\\n}\\r\\n\\r\\n@media screen and (min-width: 414px)\\r\\n{\\r\\n    .page>.disk>.circle {\\r\\n        width: 342px;\\r\\n        height: 342px;\\r\\n        margin: 0 auto;\\r\\n        position: relative;\\r\\n    }\\r\\n    .page>.disk>.circle>img {\\r\\n        width: 224px;\\r\\n        height: 224px;\\r\\n        position: absolute;\\r\\n        top: 50%;\\r\\n        left: 50%;\\r\\n        margin-left: -112px;\\r\\n        margin-top: -112px;\\r\\n        border-radius: 50%;\\r\\n        z-index: -1;\\r\\n    }\\r\\n}\\r\\n\\r\\n.page>.disk>.circle::before {\\r\\n    content: '';\\r\\n    position: absolute;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    background: transparent url(\\\"/images/songBg.png\\\") no-repeat center;\\r\\n    background-size: cover;\\r\\n}\\r\\n\\r\\n.page>.disk>.circle::after {\\r\\n    content: '';\\r\\n    position: absolute;\\r\\n    top: 0;\\r\\n    left: 0;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    background: transparent url(\\\"/images/songRotate.png\\\") no-repeat center;\\r\\n    background-size: cover;\\r\\n}\\r\\n\\r\\n\\r\\n.page>.disk>.circle>img,\\r\\n.page>.disk>.circle::after{\\r\\n    animation: spin 20s linear infinite;\\r\\n}\\r\\n\\r\\n\\r\\n@keyframes spin {\\r\\n    0% {\\r\\n        transform: rotateZ(0deg);\\r\\n    }\\r\\n    100% {\\r\\n        transform: rotateZ(360deg);\\r\\n    }\\r\\n}\\r\\n\\r\\n.page>.disk>.pause>img,\\r\\n.page>.disk>.pause::after {\\r\\n    animation-play-state: paused;\\r\\n}\\r\\n\\r\\n.page>.disk>.pause::after {\\r\\n    content: '';\\r\\n    width: 56px;\\r\\n    height: 56px;\\r\\n    position: absolute;\\r\\n    top: 50%;\\r\\n    left: 50%;\\r\\n    margin-left: -28px;\\r\\n    margin-top: -28px;\\r\\n    background: url(\\\"/images/play.png\\\") no-repeat;\\r\\n    background-size: cover;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n/* bottom tool */\\r\\n\\r\\n.bottomTool {\\r\\n    position: fixed;\\r\\n    left: 0;\\r\\n    bottom:35px;\\r\\n    width: 100%;\\r\\n}\\r\\n\\r\\n.currentTime {\\r\\n    display: flex;\\r\\n    justify-content: space-around;\\r\\n    align-items: center;\\r\\n    width: 100%;\\r\\n    padding: 0 10px;\\r\\n    margin-bottom: 35px;\\r\\n}\\r\\n\\r\\n.currentTime>span {\\r\\n    color: #E0E0E0;\\r\\n    font-size: 12px;\\r\\n}\\r\\n\\r\\n.currentTime .wrap{\\r\\n    background-color: #4D494A;\\r\\n    width: 70%;\\r\\n    height: 3px;\\r\\n    border-radius: 20px;\\r\\n}\\r\\n\\r\\n.currentTime .currentWrap {\\r\\n    background-color: #D9404A;\\r\\n    width: 80%;\\r\\n    z-index: 2;\\r\\n    height: 3px;\\r\\n    border-radius: 20px;\\r\\n    \\r\\n}\\r\\n\\r\\n.toolButton {\\r\\n    display: flex;\\r\\n    justify-content: space-around;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\n.toolButton>div>img {\\r\\n    width: 50px;\\r\\n    height: 50px;\\r\\n}\\r\\n\\r\\n.toolButton>div.playMethod>img {\\r\\n    width: 25px;\\r\\n    height: 25px;\\r\\n}\\r\\n\\r\\n.toolButton>div.playList>img {\\r\\n    width: 25px;\\r\\n    height: 25px;\\r\\n}\\r\\n\\r\\n.toolButton>div.playSong>img.pause {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n.toolButton>div.playSong>img.active {\\r\\n    display: inline-block;\\r\\n    vertical-align: top;\\r\\n}\\r\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/song.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -150,18 +117,6 @@ eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loa
 
 "use strict";
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \"{\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    for (var i = 0; i < this.length; i++) {\n      // eslint-disable-next-line prefer-destructuring\n      var id = this[i][0];\n\n      if (id != null) {\n        alreadyImportedModules[id] = true;\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = modules[_i]; // skip already imported module\n      // this implementation is not 100% perfect for weird media query combinations\n      // when a module is imported multiple times with different media queries.\n      // I hope this will never occur (Hey this way we have smaller bundles)\n\n      if (item[0] == null || !alreadyImportedModules[item[0]]) {\n        if (mediaQuery && !item[2]) {\n          item[2] = mediaQuery;\n        } else if (mediaQuery) {\n          item[2] = \"(\".concat(item[2], \") and (\").concat(mediaQuery, \")\");\n        }\n\n        list.push(item);\n      }\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot).concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nmodule.exports = function (url, needQuotes) {\n  // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n  url = url.__esModule ? url.default : url;\n\n  if (typeof url !== 'string') {\n    return url;\n  } // If url is already wrapped in quotes, remove them\n\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]/.test(url) || needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, '\\\\n'), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -233,50 +188,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./src/getsong-home.js":
+/***/ "./src/getsong-song.js":
 /*!*****************************!*\
-  !*** ./src/getsong-home.js ***!
+  !*** ./src/getsong-song.js ***!
   \*****************************/
-/*! exports provided: getsong_home */
+/*! exports provided: getsong_song */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getsong_home\", function() { return getsong_home; });\nfunction getsong_home($,AV){\r\n    let $loaderWrap = $('.loaderWrap') //获取歌曲列表\r\n    let page = 1\r\n    let limit = 10\r\n    let reach = true\r\n    function getQuery (limit,page) {\r\n        var query = new AV.Query('Song');\r\n        query.limit(limit);\r\n        query.skip(page * 10)\r\n        return query.find()\r\n    }\r\n\r\n    function fillSongs (Songs) {\r\n        for(let i =0;i < Songs.length;i++)\r\n        {\r\n            \r\n            let song = Songs[i]\r\n            $loaderWrap.before(template(song))\r\n        }\r\n        if(Songs.length < 10)\r\n        {\r\n            $('.loadMore').remove()\r\n            $('.noMore').addClass('active')\r\n        }\r\n        else {\r\n            page += 1\r\n            reach = true\r\n        }\r\n        \r\n    }\r\n    function template (song) {\r\n        return `<li data-id=\"${song.id}\">\r\n            <div class=\"songBaseInfo\">\r\n                <h3>${song.attributes.musicName}</h3>\r\n                <p><i></i>${song.attributes.musicAuthor}</p>\r\n            </div>\r\n            <a href=\"${song.attributes.musicUrl}\"></a>\r\n        </li>`\r\n    }\r\n\r\n    function getSong() {\r\n        getQuery(limit,page).then(fillSongs,function(){\r\n            console.log(\"出错了\")\r\n        });\r\n    }\r\n    function gotoSongDetail(){\r\n        $(document).on('click', 'ol#songs>li', function (e) {\r\n            window.open(`./song.html?id=${e.currentTarget.dataset.id}`,\"_self\")\r\n        })\r\n    }\r\n    \r\n\r\n    function loadMore (){\r\n        $(document).on('scroll',function(){\r\n            \r\n            var top  = reach ? $('.loadMore').offset().top -  $(window).scrollTop() : -1;\r\n            if(reach && top < 700)\r\n            {\r\n                reach = false\r\n                getQuery(limit,page).then(fillSongs,function(){\r\n                    console.log(\"出错了\")\r\n                });\r\n            }\r\n        })\r\n        \r\n    }\r\n\r\n    getSong()\r\n    gotoSongDetail()\r\n    loadMore()\r\n}\r\n\n\n//# sourceURL=webpack:///./src/getsong-home.js?");
-
-/***/ }),
-
-/***/ "./src/gettype-home.js":
-/*!*****************************!*\
-  !*** ./src/gettype-home.js ***!
-  \*****************************/
-/*! exports provided: gettype_home */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"gettype_home\", function() { return gettype_home; });\nfunction gettype_home($,AV) {\r\n\r\n    var loadingImage = new Image()\r\n    loadingImage.src = \"//i.loli.net/2019/11/18/cTvoKwnSMFaRLWx.gif\"\r\n    \r\n    let $listType = $('ol#listType')  //获取歌单\r\n    function getQuery() {\r\n        var query = new AV.Query('SongList');\r\n        return query.find()\r\n    }\r\n\r\n    function fillListType(listType) {\r\n        for (let i = 0; i < listType.length; i++) {\r\n            let type = listType[i]\r\n            $listType.append(template(type))\r\n        }\r\n        $('#listType>img').remove()\r\n    }\r\n    function template(type) {\r\n        return `\r\n        <li data-type=\"${type.id}\">\r\n            <div class=\"cover\">\r\n                <img src=\"${type.attributes.listPic}\" alt=\"图片\">\r\n            </div>\r\n            <p>${type.attributes.listName}</p>\r\n        </li>`\r\n    }\r\n\r\n    getQuery().then(fillListType, function () {\r\n        console.log(\"出错啦!\")\r\n    });\r\n\r\n    $(document).on('click', 'ol#listType>li', function (e) {\r\n        window.open(`./listtype.html?type=${e.currentTarget.dataset.type}`, \"_self\")\r\n    })\r\n}\r\n\n\n//# sourceURL=webpack:///./src/gettype-home.js?");
-
-/***/ }),
-
-/***/ "./src/home.css":
-/*!**********************!*\
-  !*** ./src/home.css ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./home.css */ \"./node_modules/css-loader/dist/cjs.js!./src/home.css\");\n\nif (typeof content === 'string') {\n  content = [[module.i, content, '']];\n}\n\nvar options = {}\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\")(content, options);\n\nif (content.locals) {\n  module.exports = content.locals;\n}\n\n\n//# sourceURL=webpack:///./src/home.css?");
-
-/***/ }),
-
-/***/ "./src/home.js":
-/*!*********************!*\
-  !*** ./src/home.js ***!
-  \*********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _av_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./av-init */ \"./src/av-init.js\");\n/* harmony import */ var _getsong_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getsong-home */ \"./src/getsong-home.js\");\n/* harmony import */ var _gettype_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gettype-home */ \"./src/gettype-home.js\");\n/* harmony import */ var _tabs_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tabs-home */ \"./src/tabs-home.js\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reset.css */ \"./src/reset.css\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_reset_css__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _home_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home.css */ \"./src/home.css\");\n/* harmony import */ var _home_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_home_css__WEBPACK_IMPORTED_MODULE_5__);\n\n__webpack_require__(/*! expose-loader?$!../vendors/jquery.min.js */ \"./node_modules/expose-loader/index.js?$!./vendors/jquery.min.js\");\n__webpack_require__(/*! expose-loader?AV!../vendors/av-min.js */ \"./node_modules/expose-loader/index.js?AV!./vendors/av-min.js\");\n\n\n\n\n\n\n\n\n\nObject(_av_init__WEBPACK_IMPORTED_MODULE_0__[\"av_init\"])()\nObject(_tabs_home__WEBPACK_IMPORTED_MODULE_3__[\"tabs_home\"])($)\nObject(_getsong_home__WEBPACK_IMPORTED_MODULE_1__[\"getsong_home\"])($,AV)\nObject(_gettype_home__WEBPACK_IMPORTED_MODULE_2__[\"gettype_home\"])($,AV)\n\n\n//# sourceURL=webpack:///./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getsong_song\", function() { return getsong_song; });\nfunction getsong_song($,AV){\r\n\r\n\r\n    var $disk = $('#disk')\r\n\r\n    var queryString = function (key) {\r\n        return (document.location.search.match(new RegExp(\"(?:^\\\\?|&)\" + key + \"=(.*?)(?=&|$)\")) || ['', null])[1];\r\n    }\r\n    \r\n    $(document).on('click', function () {\r\n        var $circle = $('.circle')\r\n        var audio = document.querySelector('audio#play')\r\n        if (audio.paused) {\r\n            audio.play()\r\n            $circle.removeClass('pause')\r\n        } else {\r\n            audio.pause()\r\n            $circle.addClass('pause')\r\n        }\r\n    })\r\n\r\n    function template(){\r\n        return `<div class=\"circle playing\">\r\n            <img src=\"/images/place.jpg\" alt=\"图片\">\r\n        </div>`\r\n    }\r\n\r\n    function getQuery(){\r\n        var query = new AV.Query('Song');\r\n        return query\r\n    }\r\n\r\n    function getSong() {\r\n        getQuery().get(queryString('id')).then(function (song) {\r\n            $disk.append(template())\r\n            \r\n            playAudio(song)\r\n        });\r\n    }\r\n\r\n    function playAudio(song){\r\n        let audio = document.createElement('audio')\r\n        audio.src = song.attributes.musicUrl\r\n        audio.id = 'play'\r\n        audio.play()\r\n        document.querySelector('body').append(audio)\r\n    }\r\n    function changeScroll(){\r\n        $(document).unbind('scroll')\r\n    }\r\n    changeScroll()\r\n    getSong()\r\n}\n\n//# sourceURL=webpack:///./src/getsong-song.js?");
 
 /***/ }),
 
@@ -291,15 +211,26 @@ eval("var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs
 
 /***/ }),
 
-/***/ "./src/tabs-home.js":
-/*!**************************!*\
-  !*** ./src/tabs-home.js ***!
-  \**************************/
-/*! exports provided: tabs_home */
+/***/ "./src/song.css":
+/*!**********************!*\
+  !*** ./src/song.css ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./song.css */ \"./node_modules/css-loader/dist/cjs.js!./src/song.css\");\n\nif (typeof content === 'string') {\n  content = [[module.i, content, '']];\n}\n\nvar options = {}\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\")(content, options);\n\nif (content.locals) {\n  module.exports = content.locals;\n}\n\n\n//# sourceURL=webpack:///./src/song.css?");
+
+/***/ }),
+
+/***/ "./src/song.js":
+/*!*********************!*\
+  !*** ./src/song.js ***!
+  \*********************/
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"tabs_home\", function() { return tabs_home; });\n\nfunction tabs_home($){\n\t$('.tapbars>ol').on('click', 'li', function (e) {\n\t\tlet $li = $(e.currentTarget)\n\t\tlet index = $li.index()\n\t\t\tlet $content = $('.tapbarsContent>li')\n\t\t\t$li.addClass('active').siblings().removeClass('active')\n\t\t\t$content.eq(index).addClass('active').siblings().removeClass('active')\n\t})\n}\n\n//# sourceURL=webpack:///./src/tabs-home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _getsong_song__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getsong-song */ \"./src/getsong-song.js\");\n/* harmony import */ var _av_init__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./av-init */ \"./src/av-init.js\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reset.css */ \"./src/reset.css\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reset_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _song_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./song.css */ \"./src/song.css\");\n/* harmony import */ var _song_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_song_css__WEBPACK_IMPORTED_MODULE_3__);\n__webpack_require__(/*! expose-loader?$!../vendors/jquery.min.js */ \"./node_modules/expose-loader/index.js?$!./vendors/jquery.min.js\");\r\n__webpack_require__(/*! expose-loader?AV!../vendors/av-min.js */ \"./node_modules/expose-loader/index.js?AV!./vendors/av-min.js\");\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nObject(_av_init__WEBPACK_IMPORTED_MODULE_1__[\"av_init\"])()\r\nObject(_getsong_song__WEBPACK_IMPORTED_MODULE_0__[\"getsong_song\"])($,AV)\n\n//# sourceURL=webpack:///./src/song.js?");
 
 /***/ }),
 

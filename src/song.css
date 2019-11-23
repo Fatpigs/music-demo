@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     display: inline-block;
-    background: url("/vendors/place.jpg") no-repeat;
+    background: url("/images/place.jpg") no-repeat;
     background-size: cover;
     filter: blur(40px);
     z-index: -2;
@@ -105,7 +105,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent url("/vendors/songBg.png") no-repeat center;
+    background: transparent url("/images/songBg.png") no-repeat center;
     background-size: cover;
 }
 
@@ -116,7 +116,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent url("/vendors/songRotate.png") no-repeat center;
+    background: transparent url("/images/songRotate.png") no-repeat center;
     background-size: cover;
 }
 
@@ -150,6 +150,77 @@
     left: 50%;
     margin-left: -28px;
     margin-top: -28px;
-    background: url("/vendors/play.png") no-repeat;
+    background: url("/images/play.png") no-repeat;
     background-size: cover;
+}
+
+
+
+/* bottom tool */
+
+.bottomTool {
+    position: fixed;
+    left: 0;
+    bottom:35px;
+    width: 100%;
+}
+
+.currentTime {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 35px;
+}
+
+.currentTime>span {
+    color: #E0E0E0;
+    font-size: 12px;
+}
+
+.currentTime .wrap{
+    background-color: #4D494A;
+    width: 70%;
+    height: 3px;
+    border-radius: 20px;
+}
+
+.currentTime .currentWrap {
+    background-color: #D9404A;
+    width: 80%;
+    z-index: 2;
+    height: 3px;
+    border-radius: 20px;
+    
+}
+
+.toolButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toolButton>div>img {
+    width: 50px;
+    height: 50px;
+}
+
+.toolButton>div.playMethod>img {
+    width: 25px;
+    height: 25px;
+}
+
+.toolButton>div.playList>img {
+    width: 25px;
+    height: 25px;
+}
+
+.toolButton>div.playSong>img.pause {
+    display: none;
+}
+
+.toolButton>div.playSong>img.active {
+    display: inline-block;
+    vertical-align: top;
 }

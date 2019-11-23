@@ -1,9 +1,13 @@
 
 module.exports = {
-  entry: './src/home.js',
+  entry: {
+    bundle:'./src/home.js',
+    type: './src/type.js',
+    song: './src/song.js'
+  },
   output: {
-    filename: './bundle.js'
-  
+    filename: '[name].js',
+    path: __dirname + '/dist'
   },
   module: {
     rules: [

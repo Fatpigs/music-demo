@@ -1,24 +1,24 @@
-!(function getSong () {
+export function getsong_type ($,AV) {
 
-    $(document).on('click','#songsList>li',function(e){
-        window.open(`./song.html?id=${e.currentTarget.dataset.id}`,"_self")
-    })
-
+    function gotoSongDetail(){
+        $(document).on('click','#songsList>li',function(e){
+            window.open(`./song.html?id=${e.currentTarget.dataset.id}`,"_self")
+        })
+    }
+    
     function queryString(key) {
         return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
     }
 
-    function template(song) {
-        return `
-        <li data-id="${song.id}">
-            <div class="number">${i+1}</div>
+    function template(song,index) {
+        return `<li data-id="${song.id}">
+            <div class="number">${index + 1}</div>
             <div class="songBaseInfo">
-                <h3>${song.attributes.musicName}</h3>
-                <p>${song.attributes.musicAuthor}</p>
+               <h3>${song.attributes.musicName}</h3>
+               <p>${song.attributes.musicAuthor}</p>
             </div>
             <a href="${song.attributes.musicUrl}"></a>
-        </li>
-         `
+        </li>`
     }
 
     function getQuery() {
@@ -29,14 +29,21 @@
     }
 
     function getSong (){
-        getQuery.find().then(function (songs) {
+        getQuery().find().then(function (songs) {
             var $songsList = $('#songsList')
+            
             // students 是包含满足条件的 Student 对象的数组
             for(let i = 0;i < songs.length;i++) {
-                $songsList.append(template(songs[i]))
+                $songsList.append(template(songs[i],i))
             }
         });
     }
-    
-    return getSong
-})()
+
+    function changeScroll(){
+        $(document).unbind('scroll')
+    }
+
+    changeScroll()
+    gotoSongDetail()
+    getSong()
+}

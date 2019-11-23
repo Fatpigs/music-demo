@@ -231,8 +231,12 @@
     display: none;
 }
 
-#songs>div>img.none {
+#songs>div.loaderWrap>div.noMore {
     display: none;
+}
+
+#songs>div.loaderWrap>div.active {
+    display: block;
 }
 
 #listType>img.none {

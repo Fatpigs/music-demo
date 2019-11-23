@@ -30,9 +30,7 @@ export function gettype_home($,AV) {
         console.log("出错啦!")
     });
 
-
     $(document).on('click', 'ol#listType>li', function (e) {
-
         window.open(`./listtype.html?type=${e.currentTarget.dataset.type}`, "_self")
     })
 }
