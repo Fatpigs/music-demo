@@ -143,25 +143,25 @@ eval("\n\nmodule.exports = function (url, needQuotes) {\n  // eslint-disable-nex
 
 /***/ }),
 
-/***/ "./node_modules/expose-loader/index.js?$!./vendors/jquery.min.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/expose-loader?$!./vendors/jquery.min.js ***!
-  \**************************************************************/
+/***/ "./node_modules/expose-loader/index.js?$!./vendors/jquery.min.js-exposed":
+/*!**********************************************************************!*\
+  !*** ./node_modules/expose-loader?$!./vendors/jquery.min.js-exposed ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function(global) {module.exports = global[\"$\"] = __webpack_require__(/*! -!./jquery.min.js */ \"./vendors/jquery.min.js\");\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./vendors/jquery.min.js?./node_modules/expose-loader?$");
+eval("/* WEBPACK VAR INJECTION */(function(global) {module.exports = global[\"$\"] = __webpack_require__(/*! -!./jquery.min.js */ \"./vendors/jquery.min.js\");\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./vendors/jquery.min.js-exposed?./node_modules/expose-loader?$");
 
 /***/ }),
 
-/***/ "./node_modules/expose-loader/index.js?AV!./vendors/av-min.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/expose-loader?AV!./vendors/av-min.js ***!
-  \***********************************************************/
+/***/ "./node_modules/expose-loader/index.js?AV!./vendors/av-min.js-exposed":
+/*!*******************************************************************!*\
+  !*** ./node_modules/expose-loader?AV!./vendors/av-min.js-exposed ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function(global) {module.exports = global[\"AV\"] = __webpack_require__(/*! -!./av-min.js */ \"./vendors/av-min.js\");\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./vendors/av-min.js?./node_modules/expose-loader?AV");
+eval("/* WEBPACK VAR INJECTION */(function(global) {module.exports = global[\"AV\"] = __webpack_require__(/*! -!./av-min.js */ \"./vendors/av-min.js\");\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack:///./vendors/av-min.js-exposed?./node_modules/expose-loader?AV");
 
 /***/ }),
 
@@ -265,7 +265,7 @@ eval("var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _gettype_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gettype-type */ \"./src/gettype-type.js\");\n/* harmony import */ var _getsong_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getsong-type */ \"./src/getsong-type.js\");\n/* harmony import */ var _av_init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./av-init */ \"./src/av-init.js\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reset.css */ \"./src/reset.css\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_reset_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./list.css */ \"./src/list.css\");\n/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_list_css__WEBPACK_IMPORTED_MODULE_4__);\n__webpack_require__(/*! expose-loader?$!../vendors/jquery.min.js */ \"./node_modules/expose-loader/index.js?$!./vendors/jquery.min.js\");\r\n__webpack_require__(/*! expose-loader?AV!../vendors/av-min.js */ \"./node_modules/expose-loader/index.js?AV!./vendors/av-min.js\");\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nObject(_av_init__WEBPACK_IMPORTED_MODULE_2__[\"av_init\"])()\r\nObject(_gettype_type__WEBPACK_IMPORTED_MODULE_0__[\"gettype_type\"])($,AV)\r\nObject(_getsong_type__WEBPACK_IMPORTED_MODULE_1__[\"getsong_type\"])($,AV)\n\n//# sourceURL=webpack:///./src/type.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _gettype_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gettype-type */ \"./src/gettype-type.js\");\n/* harmony import */ var _getsong_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getsong-type */ \"./src/getsong-type.js\");\n/* harmony import */ var _av_init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./av-init */ \"./src/av-init.js\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reset.css */ \"./src/reset.css\");\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_reset_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./list.css */ \"./src/list.css\");\n/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_list_css__WEBPACK_IMPORTED_MODULE_4__);\n__webpack_require__(/*! expose-loader?$!../vendors/jquery.min.js */ \"./node_modules/expose-loader/index.js?$!./vendors/jquery.min.js-exposed\");\r\n__webpack_require__(/*! expose-loader?AV!../vendors/av-min.js */ \"./node_modules/expose-loader/index.js?AV!./vendors/av-min.js-exposed\");\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nObject(_av_init__WEBPACK_IMPORTED_MODULE_2__[\"av_init\"])()\r\nObject(_gettype_type__WEBPACK_IMPORTED_MODULE_0__[\"gettype_type\"])($,AV)\r\nObject(_getsong_type__WEBPACK_IMPORTED_MODULE_1__[\"getsong_type\"])($,AV)\n\n//# sourceURL=webpack:///./src/type.js?");
 
 /***/ }),
 

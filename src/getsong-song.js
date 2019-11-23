@@ -44,10 +44,27 @@ export function getsong_song($,AV){
         audio.id = 'play'
         audio.play()
         document.querySelector('body').append(audio)
+        
     }
     function changeScroll(){
         $(document).unbind('scroll')
     }
+
+
+    var timer = window.setInterval(function(){
+        var audio = document.querySelector('audio#play')
+        var audioTime = audio.duration
+        var audioCurrentTime = audio.currentTime
+
+        $('.currentTime>.leftCurrentTime').text(Math.floor(audioCurrentTime))
+        $('.currentTime>.durationTime').text(Math.floor(audioTime))
+        
+        var width = audioCurrentTime/audioTime
+        var totalwidth = $('.currentTime>.wrap').width()
+        console.log(totalwidth)
+        $('.currentWrap').width(width * totalwidth)
+    },1000)
+    
     changeScroll()
     getSong()
 }
