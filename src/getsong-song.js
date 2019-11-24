@@ -61,7 +61,7 @@ export function getsong_song($,AV){
         
         var width = audioCurrentTime/audioTime
         var totalwidth = $('.currentTime>.wrap').width()
-        console.log(totalwidth)
+
         $('.currentWrap').width(width * totalwidth)
     },1000)
     
