@@ -246,7 +246,7 @@
 /* art */
 
 .art {
-    background: url("/images/recommand_bg_2x.png") no-repeat;
+    background: url("../images/recommand_bg_2x.png") no-repeat;
     background-size: cover;
     padding-top: 16.9%;
     padding-bottom: 23px;

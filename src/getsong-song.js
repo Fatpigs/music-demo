@@ -21,7 +21,7 @@ export function getsong_song($,AV){
 
     function template(){
         return `<div class="circle playing">
-            <img src="/images/place.jpg" alt="图片">
+            <img src="./images/place.jpg" alt="图片">
         </div>`
     }
 
