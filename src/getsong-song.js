@@ -42,8 +42,9 @@ export function getsong_song($,AV){
         let audio = document.createElement('audio')
         audio.src = song.attributes.musicUrl
         audio.id = 'play'
-        audio.play()
         document.querySelector('body').append(audio)
+        audio.play()
+        
     }
     function changeScroll(){
         $(document).unbind('scroll')
