@@ -1,3 +1,12 @@
+html,body {
+    height: 100%;
+}
+
+.page {
+    height: 100%;
+    cursor: pointer;
+}
+
 .page::after {
 
     content: '';
@@ -23,6 +32,10 @@
     left: 0;
     z-index: -1;
     background-color: rgba(0,0,0,.4);
+}
+
+.page {
+    overflow: hidden;
 }
 
 .logo>svg{

@@ -7,7 +7,7 @@ export function getsong_song($,AV){
         return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
     }
     
-    $(document).on('click touchstart', function () {
+    $(document).on('click','.page',function () {
         var $circle = $('.circle')
         var audio = document.querySelector('audio#play')
         if (audio.paused) {
@@ -42,8 +42,9 @@ export function getsong_song($,AV){
         let audio = document.createElement('audio')
         audio.src = song.attributes.musicUrl
         audio.id = 'play'
-        document.querySelector('body').append(audio)
         audio.play()
+        document.querySelector('body').append(audio)
+        
         
     }
     function changeScroll(){
