@@ -7,7 +7,7 @@ export function getsong_song($,AV){
         return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
     }
     
-    $(document).on('click', function () {
+    $(document).on('click touchstart', function () {
         var $circle = $('.circle')
         var audio = document.querySelector('audio#play')
         if (audio.paused) {
