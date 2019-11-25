@@ -429,3 +429,7 @@
     background: transparent;
     pointer-events: none;
 }
+
+.songClick {
+    cursor: pointer;
+}

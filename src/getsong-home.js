@@ -29,12 +29,12 @@ export function getsong_home($,AV){
         
     }
     function template (song) {
-        return `<li data-id="${song.id}">
+        return `<li data-id="${song.id}" class="songClick">
             <div class="songBaseInfo">
                 <h3>${song.attributes.musicName}</h3>
                 <p><i></i>${song.attributes.musicAuthor}</p>
             </div>
-            <a href="${song.attributes.musicUrl}"></a>
+            <a></a>
         </li>`
     }
 
