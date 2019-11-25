@@ -1,4 +1,3 @@
-
 module.exports = {
   entry: {
     bundle:'./src/home.js',

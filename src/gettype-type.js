@@ -6,7 +6,7 @@ export function gettype_type($,AV) {
 
     function template(type) {
         return `
-        <div class="bgFuzzy" style="background: url(${type.attributes.listPic}) no-repeat;"> </div>
+        <div class="bgFuzzy" style="background: url(${type.attributes.listPic}) no-repeat center/cover;"> </div>
         <div class="list_header">
             <img src="${type.attributes.listPic}" alt="list_header">
             <p>${type.attributes.listName}</p>

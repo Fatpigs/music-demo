@@ -20,6 +20,7 @@
        -moz-filter: blur(10px);
         -ms-filter: blur(10px);    
             filter: blur(10px);
+    background-size: cover;
 }
 
 .bgFuzzy::after {
@@ -35,7 +36,7 @@
 }
 
 .list_header>img {
-    width: 126px;
+    width: 30vw;
     height: auto;
     z-index: 2;
 }
@@ -109,4 +110,3 @@
     background-size: 166px 97px;
     margin-right: 11px;
 }
-

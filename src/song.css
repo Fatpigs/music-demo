@@ -34,6 +34,9 @@
 
 .page>.disk {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -41,8 +44,9 @@
 .page>.disk>.circle {
     width: 248px;
     height: 248px;
-    margin: 0 auto;
+    overflow: hidden;
     position: relative;
+   
 }
 
 .page>.disk>.circle>img {
@@ -62,8 +66,8 @@
     .page>.disk>.circle {
         width: 296px;
         height: 296px;
-        margin: 0 auto;
         position: relative;
+        overflow: hidden;
     }
     .page>.disk>.circle>img {
         width: 190px;
@@ -85,6 +89,7 @@
         height: 342px;
         margin: 0 auto;
         position: relative;
+        overflow: hidden;
     }
     .page>.disk>.circle>img {
         width: 224px;
@@ -119,6 +124,9 @@
     height: 100%;
     background: transparent url("//i.loli.net/2019/11/24/XJPSlp5nZBMzw6t.png") no-repeat center;
     background-size: cover;
+    border-radius: 50%;
+    display: block;
+    box-sizing: border-box;
 }
 
 
@@ -154,6 +162,7 @@
     margin-top: -28px;
     background: url("//i.loli.net/2019/11/24/K5AOi8VSUXu7L3P.png") no-repeat;
     background-size: cover;
+    
 }
 
 
@@ -162,8 +171,8 @@
 
 .bottomTool {
     position: fixed;
+    bottom: 35px;
     left: 0;
-    bottom:35px;
     width: 100%;
 }
 

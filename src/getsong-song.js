@@ -20,7 +20,7 @@ export function getsong_song($,AV){
     })
 
     function template(){
-        return `<div class="circle playing">
+        return `<div class="circle">
             <img src="./images/place.jpg" alt="图片">
         </div>`
     }
@@ -44,22 +44,36 @@ export function getsong_song($,AV){
         audio.id = 'play'
         audio.play()
         document.querySelector('body').append(audio)
-        
     }
     function changeScroll(){
         $(document).unbind('scroll')
     }
 
 
+    function formatTime(time) {
+        var minute = Math.floor(time / 60)
+        var second = time % 60
+        if(minute < 10)
+        {
+            minute = '0' + minute
+        }
+        if(second < 10)
+        {
+            second = '0' + second
+        }
+        return minute + ':' + second
+    }
+
     var timer = window.setInterval(function(){
         var audio = document.querySelector('audio#play')
-        var audioTime = audio.duration
-        var audioCurrentTime = audio.currentTime
+        var audioTime = formatTime(Math.floor(audio.duration))
+        var audioCurrentTime = formatTime(Math.floor(audio.currentTime))
 
-        $('.currentTime>.leftCurrentTime').text(Math.floor(audioCurrentTime))
-        $('.currentTime>.durationTime').text(Math.floor(audioTime))
+
+        $('.currentTime>.leftCurrentTime').text(audioCurrentTime)
+        $('.currentTime>.durationTime').text(audioTime)
         
-        var width = audioCurrentTime/audioTime
+        var width = Math.floor(audio.currentTime)/Math.floor(audio.duration)
         var totalwidth = $('.currentTime>.wrap').width()
 
         $('.currentWrap').width(width * totalwidth)
