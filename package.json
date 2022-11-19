@@ -36,6 +36,6 @@
     "gulp-uglify": "^3.0.2",
     "postcss-load-config": "^2.1.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   }
 }
